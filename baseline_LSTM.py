@@ -1,10 +1,7 @@
 import numpy as np
 import os
 import time
-from sklearn.decomposition import PCA
 from sklearn.preprocessing import LabelEncoder, StandardScaler
-from sklearn.model_selection import StratifiedKFold,cross_val_score
-from matplotlib import pyplot as plt
 
 from keras.layers import LSTM, Dense, Bidirectional, Dropout, Activation
 from keras.optimizers import Adam
@@ -67,6 +64,7 @@ def read_dataset(parent_dir, files, pad=False):
         dataset.append(D)
 
     return dataset
+
 
 def pad_temporal(X):
     """
