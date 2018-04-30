@@ -9,8 +9,6 @@ from keras.optimizers import Adam
 from keras import Sequential
 from keras.callbacks import EarlyStopping
 
-os.environ['CUDA_VISIBLE_DEVICES'] = "3"
-
 problems = ['direction','path', 'sd_su', 'handwave', 'setup', 'f_r_hw_sd_su']
 
 def read_dataset_annotation(filepath, mode='row'):
@@ -172,6 +170,8 @@ if __name__ == "__main__":
         'GPU devices (default: %(default)s)')
 
     args = parser.parse_args()
+
+    os.environ['CUDA_VISIBLE_DEVICES'] = args.cuda_devices
 
     annots = read_dataset_annotation(args.annotation_filepath, mode='col')
     files = [os.path.join(annot[0].replace("\\",'/'),annot[1])
