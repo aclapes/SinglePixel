@@ -4,12 +4,13 @@ import time
 from sklearn.preprocessing import LabelEncoder
 import argparse
 
-from keras.layers import LSTM, Dense, Bidirectional, Activation
+from keras.layers import LSTM, GRU, Dense, Bidirectional, Activation
 from keras.optimizers import Adam
 from keras import Sequential
-from keras.callbacks import EarlyStopping
+from keras.callbacks import EarlyStopping, LearningRateScheduler
+from sklearn.model_selection import StratifiedKFold
 
-problems = ['direction','path', 'sd_su', 'handwave', 'setup', 'f_r_hw_sd_su']
+from keras import backend as K
 
 def read_dataset_annotation(filepath, mode='row'):
     """
@@ -40,10 +41,17 @@ def read_dataset_annotation(filepath, mode='row'):
         lines = [[value.strip() for value in line.strip().split(',')] for line in f]
 
         L = np.array(lines)
+
+        # add derived attributes
+        directed_path_col = np.array([(path + direction if path != 'none' else 'none')  for path, direction in zip(L[:,3], L[:,4])])
+        L = np.concatenate([L, directed_path_col[:,np.newaxis]], axis=1)
+        fields.append('directed_path')
+
         if mode == 'row':
-            return L
+            return L, fields
         elif mode == 'col':
-            return {field_name : L[:,i] for i,field_name in enumerate(fields)}
+            L_dict = {field_name : L[:,i] for i,field_name in enumerate(fields)}
+            return L_dict
         else:
             return NotImplementedError
 
@@ -94,6 +102,15 @@ def categorical_to_onehot(y, n_classes, dtype=np.int32):
     return y_onehot
 
 
+def scheduler(iteration):
+    if iteration < 10:
+        return 1e-3
+    elif iteration < 20:
+        return 5e-4
+    else:
+        return 1e-4
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
@@ -120,9 +137,18 @@ if __name__ == "__main__":
         '--num_epochs',
         type=int,
         dest='num_epochs',
-        default=100,
+        default=50,
         help=
         'Num epochs (default: %(default)s)')
+
+    parser.add_argument(
+        '-r',
+        '--early-stop',
+        type=bool,
+        dest='early_stop',
+        default=False,
+        help=
+        'Early stop flag (default: %(default)s)')
 
     parser.add_argument(
         '-b',
@@ -147,7 +173,7 @@ if __name__ == "__main__":
         '--hidden-size',
         type=int,
         dest='hidden_size',
-        default=256,
+        default=128,
         help=
         'Hidden size (default: %(default)s)')
 
@@ -169,9 +195,36 @@ if __name__ == "__main__":
         help=
         'GPU devices (default: %(default)s)')
 
+    parser.add_argument(
+        '-k',
+        '--k-folds',
+        type=int,
+        dest='k_folds',
+        default=10,
+        help=
+        'Number of cross-validation folds (default: %(default)s)')
+
+    parser.add_argument(
+        '-P',
+        '--problems',
+        type=str,
+        dest='problems',
+        default='direction,path,directed_path,sd_su,handwave,setup,f_r_hw_sd_su',
+        help=
+        'List of problems to consider (default: %(default)s)')
+
     args = parser.parse_args()
 
-    os.environ['CUDA_VISIBLE_DEVICES'] = args.cuda_devices
+    if K.backend() == 'tensorflow':
+        import tensorflow as tf
+        from keras.backend.tensorflow_backend import set_session
+
+        config = tf.ConfigProto()
+        config.gpu_options.allow_growth = True
+        config.gpu_options.visible_device_list = args.cuda_devices
+        set_session(tf.Session(config=config))
+    else:
+        os.environ['CUDA_VISIBLE_DEVICES'] = args.cuda_devices
 
     annots = read_dataset_annotation(args.annotation_filepath, mode='col')
     files = [os.path.join(annot[0].replace("\\",'/'),annot[1])
@@ -189,54 +242,81 @@ if __name__ == "__main__":
         print 'READING SEQUENCES (txt) took ', time.time() - st_time, ' secs.'
         np.save('/tmp/singlepixel_dataset.npy', data)
 
-    for prob in problems:  # iterate over the different problems
-        # find valid examples
-        inds_train = np.where((annots[prob] != 'none') & (train_test_split == '0'))[0]
-        inds_test = np.where((annots[prob] != 'none') & (train_test_split == '1'))[0]
-        labels_train = annots[prob][inds_train]
-        labels_test = annots[prob][inds_test]
+    # Prepare splits for the different problems
+    problems = [name.strip() for name in args.problems.split(',')]
 
-        # encode labels to categorical and transform them to one-hot
+    splits = dict()
+    for prob in problems:
         le = LabelEncoder()
-        y_train = le.fit(labels_train) # encode categories
-        y_train = categorical_to_onehot(le.fit_transform(labels_train), len(le.classes_))
-        y_test = categorical_to_onehot(le.fit_transform(labels_test), len(le.classes_))
+        y = le.fit_transform(annots[prob])  # encode categories
+        skf = StratifiedKFold(n_splits=args.k_folds, random_state=42, shuffle=True)
+        splits[prob] = skf.split(data, y)
 
-        # define keras model
-        model = Sequential()
+    # Validate the target model over the different problems
+    for prob in problems:
+        acc_train = acc_test = 0.  # these accumulate the accuracies on different train/test partitions (cross-validation)
+        for train_inds, test_inds in splits[prob]:
+            y_train = categorical_to_onehot(y[train_inds], len(le.classes_))
+            y_test = categorical_to_onehot(y[test_inds], len(le.classes_))
 
-        if args.lstm_variation == 'onelayer_lstm':
-            model.add(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, input_shape=data.shape[1:]))
-        elif args.lstm_variation == 'twolayer_lstm':
-            model.add(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, return_sequences=True, input_shape=data.shape[1:]))
-            model.add(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2))
-        elif args.lstm_variation == 'onelayer_bilstm':
-            model.add(Bidirectional(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2),
-                                    input_shape=data.shape[1:]))
-        elif args.lstm_variation == 'twolayer_bilstm':
-            model.add(Bidirectional(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, return_sequences=True),
-                                    input_shape=data.shape[1:]))
-            model.add(Bidirectional(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2)))
-        else:
-            raise NotImplementedError
+            # define keras model
+            model = Sequential()
 
-        model.add(Dense(len(le.classes_)))
-        model.add(Activation('softmax'))
-        model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.0001), metrics=['accuracy'])
-        # model.summary()
+            # LSTM
+            if args.lstm_variation == 'onelayer_lstm':
+                model.add(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, input_shape=data.shape[1:]))
+            elif args.lstm_variation == 'twolayer_lstm':
+                model.add(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, return_sequences=True, input_shape=data.shape[1:]))
+                model.add(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2))
+            elif args.lstm_variation == 'onelayer_bilstm':
+                model.add(Bidirectional(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2),
+                                        input_shape=data.shape[1:]))
+            elif args.lstm_variation == 'twolayer_bilstm':
+                model.add(Bidirectional(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, return_sequences=True),
+                                        input_shape=data.shape[1:]))
+                model.add(Bidirectional(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2)))
+            # GRU
+            elif args.lstm_variation == 'onelayer_gru':
+                model.add(GRU(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, input_shape=data.shape[1:]))
+            elif args.lstm_variation == 'twolayer_gru':
+                model.add(GRU(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, return_sequences=True, input_shape=data.shape[1:]))
+                model.add(GRU(args.hidden_size, dropout=0.2, recurrent_dropout=0.2))
+            elif args.lstm_variation == 'onelayer_bigru':
+                model.add(Bidirectional(GRU(args.hidden_size, dropout=0.2, recurrent_dropout=0.2),
+                                        input_shape=data.shape[1:]))
+            elif args.lstm_variation == 'twolayer_bigru':
+                model.add(Bidirectional(GRU(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, return_sequences=True),
+                                        input_shape=data.shape[1:]))
+                model.add(Bidirectional(GRU(args.hidden_size, dropout=0.2, recurrent_dropout=0.2)))
+            else:
+                raise NotImplementedError
 
-        # run train and test
-        history = model.fit(data[inds_train],
-                            y_train,
-                            # validation_data=(data[inds_test], y_test),
-                            batch_size=args.batch_size,
-                            epochs=args.num_epochs,
-                            shuffle=True,
-                            # callbacks=[EarlyStopping(monitor='val_loss', min_delta=1e-5, patience=20, verbose=1)],
-                            verbose=0)
+            model.add(Dense(len(le.classes_)))
+            model.add(Activation('softmax'))
+            model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+            # model.summary()
 
-        _, te_acc = model.evaluate(data[inds_test], y_test, batch_size=1, verbose=0)
-        print('[Problem] %s : %.4f, %.4f' % (prob, history.history['acc'][-1], te_acc)
-        )
+            # run train and test
+            callbacks = [LearningRateScheduler(scheduler, verbose=0)]
+            if args.early_stop:
+                callbacks.append(EarlyStopping(monitor='val_loss', patience=4, verbose=0))
+
+            history = model.fit(data[train_inds],
+                                y_train,
+                                validation_data=(data[test_inds], y_test),
+                                batch_size=args.batch_size,
+                                epochs=args.num_epochs,
+                                shuffle=True,
+                                callbacks=callbacks,
+                                verbose=1)
+
+            _, te_fold_acc = model.evaluate(data[test_inds], y_test, batch_size=1, verbose=0)
+            print('[Problem-fold] %s : %.4f, %.4f' % (prob, history.history['acc'][-1], te_fold_acc)
+            )
+
+            acc_train += history.history['acc'][-1]
+            acc_test  += te_fold_acc
+
+        print('[Problem-final] %s : %.4f, %.4f' % (prob, acc_train/args.k_folds, acc_test/args.k_folds))
 
     quit()
