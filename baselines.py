@@ -301,8 +301,8 @@ if __name__ == "__main__":
             if args.early_stop:
                 callbacks.append(EarlyStopping(monitor='val_loss', patience=4, verbose=0))
 
-            class_labels, class_counts = np.unique(y[train_inds], return_counts=True)
-            class_weight = {l:w for l,w in zip(class_labels, float(np.max(class_counts)) / class_counts)}
+            labels, label_counts = np.unique(y[train_inds], return_counts=True)
+            class_weight = {l:w for l,w in zip(labels, float(np.max(label_counts)) / label_counts)}
 
             history = model.fit(data[train_inds],
                                 y_onehot_train,
@@ -314,8 +314,9 @@ if __name__ == "__main__":
                                 callbacks=callbacks,
                                 verbose=1)
 
-            _, class_counts = np.unique(y[test_inds], return_counts=True)
-            sample_weight = np.array([1. / class_counts[yi] for yi in y[test_inds]])
+            labels, label_count = np.unique(y[test_inds], return_counts=True)
+            class_counts = {l:c for l,c in zip(labels, label_count)}
+            sample_weight = np.array([1./class_counts[yi] for yi in y[test_inds]])
             sample_weight = sample_weight / np.sum(sample_weight)
 
             _, te_fold_acc = model.evaluate(data[test_inds],
