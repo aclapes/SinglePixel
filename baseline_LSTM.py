@@ -144,9 +144,8 @@ if __name__ == "__main__":
     parser.add_argument(
         '-r',
         '--early-stop',
-        type=bool,
         dest='early_stop',
-        default=False,
+        action='store_true',
         help=
         'Early stop flag (default: %(default)s)')
 
