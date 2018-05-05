@@ -4,7 +4,7 @@ import time
 from sklearn.preprocessing import LabelEncoder
 import argparse
 
-from keras.layers import LSTM, GRU, Dense, Bidirectional, Activation
+from keras.layers import LSTM, GRU, Dense, Bidirectional, Activation, Masking
 from keras.optimizers import Adam
 from keras import Sequential
 from keras.callbacks import EarlyStopping, LearningRateScheduler
@@ -267,13 +267,13 @@ if __name__ == "__main__":
     for prob in problems:
         # mask data for this particular problem (discard 'none' examples)
         mask_prob = annots[prob] != 'none'
-        data = data_all[mask_prob,:]
 
         # encode labels
         le = LabelEncoder()
         y = le.fit_transform(annots[prob][mask_prob])
         classes = le.classes_
         y_onehot = categorical_to_onehot(y, len(classes))
+        print('[Problem] %s : #instances=%d, #classes=%d' % (prob, np.count_nonzero(mask_prob), len(classes)))
 
         # split data for validation
         skf = StratifiedKFold(n_splits=args.k_folds, random_state=42, shuffle=True)
@@ -282,35 +282,34 @@ if __name__ == "__main__":
         acc_train = acc_test = 0.
         conf_mat = np.zeros((len(classes), len(classes)), dtype=np.int32)
 
+        data = data_all[mask_prob,:]
         for train_inds, test_inds in skf.split(data, y):
             # Model definition
             model = Sequential()
+            model.add(Masking(mask_value=0., input_shape=data.shape[1:]))
 
             # (lstm)
             if args.lstm_variation == 'onelayer_lstm':
-                model.add(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, input_shape=data.shape[1:]))
+                model.add(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2))
             elif args.lstm_variation == 'twolayer_lstm':
-                model.add(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, return_sequences=True, input_shape=data.shape[1:]))
+                model.add(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, return_sequences=True))
                 model.add(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2))
             elif args.lstm_variation == 'onelayer_bilstm':
-                model.add(Bidirectional(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2),
-                                        input_shape=data.shape[1:]))
+
+                model.add(Bidirectional(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2)))
             elif args.lstm_variation == 'twolayer_bilstm':
-                model.add(Bidirectional(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, return_sequences=True),
-                                        input_shape=data.shape[1:]))
+                model.add(Bidirectional(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, return_sequences=True)))
                 model.add(Bidirectional(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2)))
             # (gru)
             elif args.lstm_variation == 'onelayer_gru':
-                model.add(GRU(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, input_shape=data.shape[1:]))
+                model.add(GRU(args.hidden_size, dropout=0.2, recurrent_dropout=0.2))
             elif args.lstm_variation == 'twolayer_gru':
-                model.add(GRU(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, return_sequences=True, input_shape=data.shape[1:]))
+                model.add(GRU(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, return_sequences=True))
                 model.add(GRU(args.hidden_size, dropout=0.2, recurrent_dropout=0.2))
             elif args.lstm_variation == 'onelayer_bigru':
-                model.add(Bidirectional(GRU(args.hidden_size, dropout=0.2, recurrent_dropout=0.2),
-                                        input_shape=data.shape[1:]))
+                model.add(Bidirectional(GRU(args.hidden_size, dropout=0.2, recurrent_dropout=0.2)))
             elif args.lstm_variation == 'twolayer_bigru':
-                model.add(Bidirectional(GRU(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, return_sequences=True),
-                                        input_shape=data.shape[1:]))
+                model.add(Bidirectional(GRU(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, return_sequences=True)))
                 model.add(Bidirectional(GRU(args.hidden_size, dropout=0.2, recurrent_dropout=0.2)))
             else:
                 raise NotImplementedError
