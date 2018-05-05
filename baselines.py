@@ -256,7 +256,7 @@ if __name__ == "__main__":
         print 'READING NPY took ', time.time() - st_time, ' secs.'
     except:
         data_all = read_dataset(args.input_dir, files)
-        data_all = pad_temporal(data)
+        data_all = pad_temporal(data_all)
         print 'READING SEQUENCES (txt) took ', time.time() - st_time, ' secs.'
         np.save('/tmp/singlepixel_dataset.npy', data_all)
 
