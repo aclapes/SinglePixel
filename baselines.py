@@ -9,6 +9,7 @@ from keras.optimizers import Adam
 from keras import Sequential
 from keras.callbacks import EarlyStopping, LearningRateScheduler
 from sklearn.model_selection import StratifiedKFold
+from sklearn.metrics import accuracy_score
 
 from keras import backend as K
 
@@ -100,6 +101,24 @@ def categorical_to_onehot(y, n_classes, dtype=np.int32):
     y_onehot[range(len(y)),y] = 1  # categorical to one-hot
 
     return y_onehot
+
+
+def confusion_matrix(true, pred, labels=None):
+    assert len(true) == len(pred)
+    labels_true = np.unique(true)
+
+    if labels is None:
+        labels = labels_true
+    else:
+        assert len(labels_true) <= len(labels)
+
+    labels_lut = {lbl: i for i, lbl in enumerate(labels)}
+
+    conf_mat = np.zeros((len(labels_lut), len(labels_lut)), dtype=np.int32)
+    for i in range(len(true)):
+        conf_mat[labels_lut[true[i]], labels_lut[pred[i]]] += 1
+
+    return conf_mat
 
 
 def scheduler(iteration):
@@ -233,36 +252,41 @@ if __name__ == "__main__":
 
     st_time = time.time()
     try:
-        data = np.load('/tmp/singlepixel_dataset.npy')
+        data_all = np.load('/tmp/singlepixel_dataset.npy')
         print 'READING NPY took ', time.time() - st_time, ' secs.'
     except:
-        data = read_dataset(args.input_dir, files)
-        data = pad_temporal(data)
+        data_all = read_dataset(args.input_dir, files)
+        data_all = pad_temporal(data)
         print 'READING SEQUENCES (txt) took ', time.time() - st_time, ' secs.'
-        np.save('/tmp/singlepixel_dataset.npy', data)
+        np.save('/tmp/singlepixel_dataset.npy', data_all)
 
     # Prepare splits for the different problems
     problems = [name.strip() for name in args.problems.split(',')]
 
-    splits = dict()
+    # Iterate
     for prob in problems:
+        # mask data for this particular problem (discard 'none' examples)
+        mask_prob = annots[prob] != 'none'
+        data = data_all[mask_prob,:]
+
+        # encode labels
         le = LabelEncoder()
-        y = le.fit_transform(annots[prob])  # encode categories
+        y = le.fit_transform(annots[prob][mask_prob])
+        classes = le.classes_
+        y_onehot = categorical_to_onehot(y, len(classes))
+
+        # split data for validation
         skf = StratifiedKFold(n_splits=args.k_folds, random_state=42, shuffle=True)
-        splits[prob] = skf.split(data, y)
 
-    # Validate the target model over the different problems
-    for prob in problems:
-        acc_train = acc_test = 0.  # these accumulate the accuracies on different train/test partitions (cross-validation)
-        for train_inds, test_inds in splits[prob]:
-            y_onehot = categorical_to_onehot(y, len(le.classes_))
-            y_onehot_train = y_onehot[train_inds,:]
-            y_onehot_test = y_onehot[test_inds,:]
+        # mantain tr/te acc across folds
+        acc_train = acc_test = 0.
+        conf_mat = np.zeros((len(classes), len(classes)), dtype=np.int32)
 
-            # define keras model
+        for train_inds, test_inds in skf.split(data, y):
+            # Model definition
             model = Sequential()
 
-            # LSTM
+            # (lstm)
             if args.lstm_variation == 'onelayer_lstm':
                 model.add(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, input_shape=data.shape[1:]))
             elif args.lstm_variation == 'twolayer_lstm':
@@ -275,7 +299,7 @@ if __name__ == "__main__":
                 model.add(Bidirectional(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, return_sequences=True),
                                         input_shape=data.shape[1:]))
                 model.add(Bidirectional(LSTM(args.hidden_size, dropout=0.2, recurrent_dropout=0.2)))
-            # GRU
+            # (gru)
             elif args.lstm_variation == 'onelayer_gru':
                 model.add(GRU(args.hidden_size, dropout=0.2, recurrent_dropout=0.2, input_shape=data.shape[1:]))
             elif args.lstm_variation == 'twolayer_gru':
@@ -294,19 +318,21 @@ if __name__ == "__main__":
             model.add(Dense(len(le.classes_)))
             model.add(Activation('softmax'))
             model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-            # model.summary()
+            model.summary()
 
-            # run train and test
+            # Train and test
+
+            # run train
             callbacks = [LearningRateScheduler(scheduler, verbose=0)]
             if args.early_stop:
-                callbacks.append(EarlyStopping(monitor='val_loss', patience=4, verbose=0))
+                callbacks.append(EarlyStopping(monitor='val_loss', patience=8, verbose=0))
 
-            labels, label_counts = np.unique(y[train_inds], return_counts=True)
-            class_weight = {l:w for l,w in zip(labels, float(np.max(label_counts)) / label_counts)}
+            labels_tr, label_counts_tr = np.unique(y[train_inds], return_counts=True)
+            class_weight = {l:w for l,w in zip(labels_tr, float(np.max(label_counts_tr)) / label_counts_tr)}
 
             history = model.fit(data[train_inds],
-                                y_onehot_train,
-                                validation_data=(data[test_inds], y_onehot_test),
+                                y_onehot[train_inds,:],
+                                validation_data=(data[test_inds], y_onehot[test_inds,:]),
                                 batch_size=args.batch_size,
                                 epochs=args.num_epochs,
                                 class_weight=class_weight,
@@ -314,22 +340,34 @@ if __name__ == "__main__":
                                 callbacks=callbacks,
                                 verbose=1)
 
-            labels, label_count = np.unique(y[test_inds], return_counts=True)
-            class_counts = {l:c for l,c in zip(labels, label_count)}
+            # run test
+            y_softmax = model.predict(data[test_inds],
+                                      batch_size=1,
+                                      verbose=0)
+
+            # Evaluation (weighted accuracy, ...)
+
+            # compute class-normalized weights
+            labels_te, label_counts_te = np.unique(y[test_inds], return_counts=True)
+            class_counts = {l:c for l,c in zip(labels_te, label_counts_te)}
             sample_weight = np.array([1./class_counts[yi] for yi in y[test_inds]])
             sample_weight = sample_weight / np.sum(sample_weight)
-
-            _, te_fold_acc = model.evaluate(data[test_inds],
-                                            y_onehot_test,
-                                            batch_size=1,
-                                            sample_weight=sample_weight,
-                                            verbose=0)
-            print('[Problem-fold] %s : %.4f, %.4f' % (prob, history.history['acc'][-1], te_fold_acc)
+            # binarize softmax outputs
+            y_pred = np.argmax(y_softmax, axis=1)  # onehot to categorical
+            y_onehot_pred = categorical_to_onehot(y_pred, y_softmax.shape[1]) # back to onehot
+            # find hits and apply weights
+            te_acc_fold = np.sum(np.sum(y_onehot[test_inds,:] * y_onehot_pred, axis=1) * sample_weight)
+            print('[Problem-fold] %s : %.4f, %.4f' % (prob, history.history['acc'][-1], te_acc_fold)
             )
 
-            acc_train += history.history['acc'][-1]
-            acc_test  += te_fold_acc
+            conf_mat_fold = confusion_matrix(y[test_inds], y_pred, labels=le.transform(classes))
 
-        print('[Problem-final] %s : %.4f, %.4f' % (prob, acc_train/args.k_folds, acc_test/args.k_folds))
+            acc_train += history.history['acc'][-1]
+            acc_test  += te_acc_fold
+            conf_mat  += conf_mat_fold
+
+        print('[Problem-final] %s : %.4f, %.4f (weighted)' % (prob, acc_train/args.k_folds, acc_test/args.k_folds))
+        print(le.classes_)
+        print conf_mat
 
     quit()
