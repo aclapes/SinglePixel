@@ -291,6 +291,7 @@ if __name__ == "__main__":
             le_groups = LabelEncoder()
             groups = le_groups.fit_transform(annots['group_id'][mask_prob])
             split = skf.split(data, y, groups)
+            print('[Problem] %s : groups={%s}' % (prob, ','.join(le_groups.classes_)))
 
         # mantain tr/te acc across folds
         acc_train = acc_test = 0.
@@ -378,7 +379,7 @@ if __name__ == "__main__":
             acc_test  += te_acc_fold
             conf_mat  += conf_mat_fold
 
-        print('[Problem-final] %s : %.4f, %.4f (weighted)' % (prob, acc_train/args.k_folds, acc_test/args.k_folds))
+        print('[Problem-final] %s : %.4f, %.4f (weighted)' % (prob, acc_train/skf.n_splits, acc_test/skf.n_splits))
         print(le_classes.classes_)
         print conf_mat
 
