@@ -55,7 +55,7 @@ def read_dataset_annotation(filepath, fields=None, mode='row'):
         if fields:
             return {
                 field_name : L_dict[field_name]
-                for i,field_name in enumerate(fields + ['folder', 'file_name', 'group_id', 'train_test_split'])
+                for i,field_name in enumerate(fields + ['folder', 'file_name', 'group_id'])
             }
         else:
             return L_dict
@@ -254,8 +254,6 @@ if __name__ == "__main__":
     annots = read_dataset_annotation(args.annotation_filepath, fields=problems, mode='col')
     files = [os.path.join(annot[0].replace("\\",'/'),annot[1])
              for annot in zip(annots['folder'], annots['file_name'])]
-
-    train_test_split = annots['train_test_split']
 
     st_time = time.time()
     try:
