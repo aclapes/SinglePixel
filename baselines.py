@@ -8,12 +8,12 @@ from keras.layers import LSTM, GRU, Dense, Bidirectional, Activation, Masking
 from keras.optimizers import Adam
 from keras import Sequential
 from keras.callbacks import EarlyStopping, LearningRateScheduler
-from sklearn.model_selection import StratifiedKFold
+from sklearn.model_selection import StratifiedKFold, LeaveOneGroupOut
 from sklearn.metrics import accuracy_score
 
 from keras import backend as K
 
-def read_dataset_annotation(filepath, mode='row'):
+def read_dataset_annotation(filepath, fields=None, mode='row'):
     """
     Reads dataset annotation one_pixel_data.csv, either row- or column-wise.
     :param filepath: path of one_pixel_data.csv file.
@@ -22,39 +22,43 @@ def read_dataset_annotation(filepath, mode='row'):
         (if column-wise, it is a dictionary of pairs (field_name, 1-D field_data)
     """
 
-    fields = ['folder',
-              'file_name',
-              'repetition',
-              'path',
-              'direction',
-              'sd_su',
-              'handwave',
-              'setup',
-              'windows',
-              'exceptions',
-              'f_r_hw_sd_su',
-              'train_test_split']
+    # fields = ['folder',
+    #           'file_name',
+    #           'repetition',
+    #           'path',
+    #           'direction',
+    #           'sd_su',
+    #           'handwave',
+    #           'setup',
+    #           'windows',
+    #           'exceptions',
+    #           'f_r_hw_sd_su',
+    #           'train_test_split']
 
     with open(filepath, 'r') as f:
-
         header = f.next().strip().split(',')
-        assert header == fields
         lines = [[value.strip() for value in line.strip().split(',')] for line in f]
 
         L = np.array(lines)
+        L_dict = {field: L[:,i] for i, field in enumerate(header)}
+        L_dict['group_id'] = np.array([file_name.split('_')[1] for file_name in L_dict['file_name']])
 
-        # add derived attributes
-        directed_path_col = np.array([(path + direction if path != 'none' else 'none')  for path, direction in zip(L[:,3], L[:,4])])
-        L = np.concatenate([L, directed_path_col[:,np.newaxis]], axis=1)
-        fields.append('directed_path')
+        for field in fields:
+            if field not in header: # then we assume it's a compound field
+                field_split = field.split('-')
+                compound_field = L_dict[field_split[0]]
+                for subfield in field_split[1:]:
+                    compound_field = [(value + L_dict[subfield][i] if value != 'none' else 'none')
+                                      for i,value in enumerate(compound_field)]
+                L_dict[field] = np.array(compound_field)
 
-        if mode == 'row':
-            return L, fields
-        elif mode == 'col':
-            L_dict = {field_name : L[:,i] for i,field_name in enumerate(fields)}
-            return L_dict
+        if fields:
+            return {
+                field_name : L_dict[field_name]
+                for i,field_name in enumerate(fields + ['folder', 'file_name', 'group_id', 'train_test_split'])
+            }
         else:
-            return NotImplementedError
+            return L_dict
 
 
 def read_dataset(parent_dir, files, pad=False):
@@ -244,7 +248,10 @@ if __name__ == "__main__":
     else:
         os.environ['CUDA_VISIBLE_DEVICES'] = args.cuda_devices
 
-    annots = read_dataset_annotation(args.annotation_filepath, mode='col')
+    # Prepare splits for the different problems
+    problems = [name.strip() for name in args.problems.split(',')]
+
+    annots = read_dataset_annotation(args.annotation_filepath, fields=problems, mode='col')
     files = [os.path.join(annot[0].replace("\\",'/'),annot[1])
              for annot in zip(annots['folder'], annots['file_name'])]
 
@@ -260,30 +267,36 @@ if __name__ == "__main__":
         print 'READING SEQUENCES (txt) took ', time.time() - st_time, ' secs.'
         np.save('/tmp/singlepixel_dataset.npy', data_all)
 
-    # Prepare splits for the different problems
-    problems = [name.strip() for name in args.problems.split(',')]
-
     # Iterate
     for prob in problems:
         # mask data for this particular problem (discard 'none' examples)
         mask_prob = annots[prob] != 'none'
 
         # encode labels
-        le = LabelEncoder()
-        y = le.fit_transform(annots[prob][mask_prob])
-        classes = le.classes_
+        le_classes = LabelEncoder()
+        y = le_classes.fit_transform(annots[prob][mask_prob])
+        classes = le_classes.classes_
         y_onehot = categorical_to_onehot(y, len(classes))
         print('[Problem] %s : #instances=%d, #classes=%d' % (prob, np.count_nonzero(mask_prob), len(classes)))
 
+        data = data_all[mask_prob,:]
+
         # split data for validation
-        skf = StratifiedKFold(n_splits=args.k_folds, random_state=42, shuffle=True)
+
+        if args.k_folds > 0:
+            skf = StratifiedKFold(n_splits=args.k_folds, random_state=42, shuffle=True)
+            split = skf.split(data, y)
+        else:
+            skf = LeaveOneGroupOut()
+            le_groups = LabelEncoder()
+            groups = le_groups.fit_transform(annots['group_id'][mask_prob])
+            split = skf.split(data, y, groups)
 
         # mantain tr/te acc across folds
         acc_train = acc_test = 0.
         conf_mat = np.zeros((len(classes), len(classes)), dtype=np.int32)
 
-        data = data_all[mask_prob,:]
-        for train_inds, test_inds in skf.split(data, y):
+        for train_inds, test_inds in split:
             # Model definition
             model = Sequential()
             model.add(Masking(mask_value=0., input_shape=data.shape[1:]))
@@ -314,7 +327,7 @@ if __name__ == "__main__":
             else:
                 raise NotImplementedError
 
-            model.add(Dense(len(le.classes_)))
+            model.add(Dense(len(le_classes.classes_)))
             model.add(Activation('softmax'))
             model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
             model.summary()
@@ -359,14 +372,14 @@ if __name__ == "__main__":
             print('[Problem-fold] %s : %.4f, %.4f' % (prob, history.history['acc'][-1], te_acc_fold)
             )
 
-            conf_mat_fold = confusion_matrix(y[test_inds], y_pred, labels=le.transform(classes))
+            conf_mat_fold = confusion_matrix(y[test_inds], y_pred, labels=le_classes.transform(classes))
 
             acc_train += history.history['acc'][-1]
             acc_test  += te_acc_fold
             conf_mat  += conf_mat_fold
 
         print('[Problem-final] %s : %.4f, %.4f (weighted)' % (prob, acc_train/args.k_folds, acc_test/args.k_folds))
-        print(le.classes_)
+        print(le_classes.classes_)
         print conf_mat
 
     quit()
