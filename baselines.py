@@ -309,8 +309,9 @@ if __name__ == "__main__":
                 split = skf.split(data, y, groups)
             else:
                 groups = le_groups.fit_transform(annots['group_id'][y==1])
-                split = [(np.concatenate([s[0],np.where(y==0)[0]]),s[1])
-                         for s in skf.split(data[y==1], y[y==1], groups)]
+                skf = StratifiedKFold(n_splits=len(le_groups.classes_), random_state=42, shuffle=True)
+                split = [(np.concatenate([s[0],r[0]]),np.concatenate([s[1],r[1]]))
+                         for s,r in zip(skf.split(data[y==1], y[y==1], groups), skf.split(data[y==0], y[y==0]))]
             n_splits = len(le_groups.classes_)
             print('[Problem] %s : groups={%s}' % (prob, ','.join(le_groups.classes_)))
 
