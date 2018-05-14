@@ -135,7 +135,12 @@ def scheduler(iteration):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description='Single pixel action baseline implementations. '
+                    'It implements LSTM and GRU temporal models and some variations of theirs.'
+                    'These are validated in several problems. The data and additional descriptions'
+                    'can be found at: https://github.com/aclapes/SinglePixel.'
+    )
 
     parser.add_argument(
         '-i',
@@ -144,7 +149,8 @@ if __name__ == "__main__":
         dest='input_dir',
         default='./data/',
         help=
-        'Dataset directory location (default: %(default)s)')
+        'Dataset directory location'
+    )
 
     parser.add_argument(
         '-a',
@@ -153,33 +159,8 @@ if __name__ == "__main__":
         dest='annotation_filepath',
         default='./one_pixel_data_v2.csv',
         help=
-        'Annotation file location (default: %(default)s)')
-
-    parser.add_argument(
-        '-e',
-        '--num_epochs',
-        type=int,
-        dest='num_epochs',
-        default=50,
-        help=
-        'Num epochs (default: %(default)s)')
-
-    parser.add_argument(
-        '-r',
-        '--early-stop',
-        dest='early_stop',
-        action='store_true',
-        help=
-        'Early stop flag (default: %(default)s)')
-
-    parser.add_argument(
-        '-b',
-        '--batch_size',
-        type=int,
-        dest='batch_size',
-        default=32,
-        help=
-        'Batch size (default: %(default)s)')
+        'Annotation file location'
+    )
 
     parser.add_argument(
         '-l',
@@ -188,7 +169,19 @@ if __name__ == "__main__":
         dest='lstm_variation',
         default='onelayer_lstm',
         help=
-        'Choose between onelayer_lstm, twolayer_lstm, onelayer_bilstm, twolayer_bilstm (default: %(default))')
+        'Choose between onelayer_lstm, twolayer_lstm, onelayer_bilstm, twolayer_bilstm, \
+        onelayer_gru, twolayer_gru, onelayer_bigru, twolayer_bigru',
+    )
+
+    parser.add_argument(
+        '-P',
+        '--problems',
+        type=str,
+        dest='problems',
+        default='forward,reverse,sd,su,handwave',
+        help=
+        'List of problems to consider (columns in .csv provided with -a option)'
+    )
 
     parser.add_argument(
         '-s',
@@ -197,7 +190,8 @@ if __name__ == "__main__":
         dest='hidden_size',
         default=128,
         help=
-        'Hidden size (default: %(default)s)')
+        'LSTM/GRPU hidden layer size'
+    )
 
     # parser.add_argument(
     #     '-G',
@@ -206,16 +200,37 @@ if __name__ == "__main__":
     #     dest='gpu_memory',
     #     default=0.24,
     #     help=
-    #     'GPU memory to reserve (default: %(default)s)')
+    #     'GPU memory to reserve (default: %(default)s)'
+    # )
 
     parser.add_argument(
-        '-D',
-        '--cuda-devices',
-        type=str,
-        dest='cuda_devices',
-        default="3",
+        '-b',
+        '--batch_size',
+        type=int,
+        dest='batch_size',
+        default=32,
         help=
-        'GPU devices (default: %(default)s)')
+        'Batch size'
+    )
+
+    parser.add_argument(
+        '-e',
+        '--num_epochs',
+        type=int,
+        dest='num_epochs',
+        default=50,
+        help=
+        'Num epochs'
+    )
+
+    parser.add_argument(
+        '-r',
+        '--early-stop',
+        dest='early_stop',
+        action='store_true',
+        help=
+        'Early stop flag. If validation loss stopped decreasing'
+    )
 
     parser.add_argument(
         '-k',
@@ -224,16 +239,18 @@ if __name__ == "__main__":
         dest='k_folds',
         default=10,
         help=
-        'Number of cross-validation folds (default: %(default)s)')
+        'Number of cross-validation folds (by default 10). If 0, leave-one-group-out is performed'
+    )
 
     parser.add_argument(
-        '-P',
-        '--problems',
+        '-D',
+        '--cuda-devices',
         type=str,
-        dest='problems',
-        default='direction,path,directed_path,sd_su,handwave,setup,f_r_hw_sd_su',
+        dest='cuda_devices',
+        default="0",
         help=
-        'List of problems to consider (default: %(default)s)')
+        'Comma-separated list of GPU devices. GPU with id=0 is used'
+    )
 
     args = parser.parse_args()
 
