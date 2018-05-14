@@ -287,8 +287,13 @@ if __name__ == "__main__":
         else:
             skf = LeaveOneGroupOut()
             le_groups = LabelEncoder()
-            groups = le_groups.fit_transform(annots['group_id'][mask_prob])
-            split = skf.split(data, y, groups)
+            if 'none' in annots[prob]:
+                groups = le_groups.fit_transform(annots['group_id'][mask_prob])
+                split = skf.split(data, y, groups)
+            else:
+                groups = le_groups.fit_transform(annots['group_id'][y==1])
+                split = [(np.concatenate([s[0],np.where(y==0)[0]]),s[1])
+                         for s in skf.split(data[y==1], y[y==1], groups)]
             print('[Problem] %s : groups={%s}' % (prob, ','.join(le_groups.classes_)))
 
         # mantain tr/te acc across folds
