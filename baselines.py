@@ -297,20 +297,22 @@ if __name__ == "__main__":
         data = data_all[mask_prob,:]
 
         # split data for validation
-
         if args.k_folds > 0:
             skf = StratifiedKFold(n_splits=args.k_folds, random_state=42, shuffle=True)
             split = skf.split(data, y)
+            n_splits = skf.n_splits
         else:
             skf = LeaveOneGroupOut()
             le_groups = LabelEncoder()
             if 'none' in annots[prob]:
                 groups = le_groups.fit_transform(annots['group_id'][mask_prob])
                 split = skf.split(data, y, groups)
+                n_splits = skf.get_n_splits()
             else:
                 groups = le_groups.fit_transform(annots['group_id'][y==1])
                 split = [(np.concatenate([s[0],np.where(y==0)[0]]),s[1])
                          for s in skf.split(data[y==1], y[y==1], groups)]
+                n_splits = skf.get_n_splits()
             print('[Problem] %s : groups={%s}' % (prob, ','.join(le_groups.classes_)))
 
         # mantain tr/te acc across folds
@@ -399,7 +401,7 @@ if __name__ == "__main__":
             acc_test  += te_acc_fold
             conf_mat  += conf_mat_fold
 
-        print('[Problem-final] %s : %.4f, %.4f (weighted)' % (prob, acc_train/skf.n_splits, acc_test/skf.n_splits))
+        print('[Problem-final] %s : %.4f, %.4f (weighted)' % (prob, acc_train/n_splits, acc_test/n_splits))
         print(le_classes.classes_)
         print conf_mat
 
