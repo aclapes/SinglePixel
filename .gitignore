@@ -1,3 +1,5 @@
+*.pkl
+*.h5
 *.png
 *.sh
 *.out
