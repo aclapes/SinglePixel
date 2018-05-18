@@ -225,7 +225,7 @@ if __name__ == "__main__":
 
             # run test
             y_softmax = model.predict(data[test_inds],
-                                      batch_size=args.batch_size,
+                                      batch_size=args.batch_size*2,
                                       verbose=0)
 
             # Evaluation (weighted accuracy, ...)
@@ -242,7 +242,8 @@ if __name__ == "__main__":
             test_softmax.append(y_softmax)
 
             if weights_init:
-                model.set_weights(weights_init)
+                model.reset_states()
+		model.set_weights(weights_init)
 
         results_filepath = join('results', '%s.%s.pkl' % (model_name, val_type))
 
