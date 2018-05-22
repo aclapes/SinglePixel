@@ -221,11 +221,11 @@ if __name__ == "__main__":
                 try: os.makedirs(os.path.dirname(model_filepath))
                 except OSError,e: pass
 
-                model.save(model_filepath)
+                # model.save(model_filepath)
 
             # run test
             y_softmax = model.predict(data[test_inds],
-                                      batch_size=args.batch_size,
+                                      batch_size=1,
                                       verbose=0)
 
             # Evaluation (weighted accuracy, ...)
@@ -242,6 +242,7 @@ if __name__ == "__main__":
             test_softmax.append(y_softmax)
 
             if weights_init:
+                model.reset_states()
                 model.set_weights(weights_init)
 
         results_filepath = join('results', '%s.%s.pkl' % (model_name, val_type))
@@ -249,18 +250,18 @@ if __name__ == "__main__":
         try: os.makedirs(os.path.dirname(results_filepath))
         except OSError,e: pass
 
-        with open(results_filepath, 'w') as pkl:
-            dump_content = dict(
-                args=args,
-                annots_prob=annots[prob][mask_prob],
-                classes=classes,
-                split=split,
-                test_trues=test_trues,
-                test_softmax=test_softmax,
-                acc_test=acc_test,
-                conf_mat=conf_mat
-            )
-            pickle.dump(dump_content, pkl)
+        # with open(results_filepath, 'w') as pkl:
+        #     dump_content = dict(
+        #         args=args,
+        #         annots_prob=annots[prob][mask_prob],
+        #         classes=classes,
+        #         split=split,
+        #         test_trues=test_trues,
+        #         test_softmax=test_softmax,
+        #         acc_test=acc_test,
+        #         conf_mat=conf_mat
+        #     )
+        #     pickle.dump(dump_content, pkl)
 
         print(classes)
         conf_mat = np.sum(conf_mat, axis=-1)
