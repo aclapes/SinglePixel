@@ -231,7 +231,7 @@ if __name__ == "__main__":
             try: os.makedirs('results-final')
             except OSError: pass
 
-            evaluation_filename = os.path.split(os.path.basename(args.evaluation))[0]
+            evaluation_filename = os.path.splitext(os.path.basename(args.evaluation))[0]
             with open(join('results-final', '.'.join([model_name, evaluation_filename, 'pkl'])), 'w') as pkl:
                 dump_content = dict(
                     args=args,
