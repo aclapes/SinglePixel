@@ -250,18 +250,18 @@ if __name__ == "__main__":
         try: os.makedirs(os.path.dirname(results_filepath))
         except OSError,e: pass
 
-        # with open(results_filepath, 'w') as pkl:
-        #     dump_content = dict(
-        #         args=args,
-        #         annots_prob=annots[prob][mask_prob],
-        #         classes=classes,
-        #         split=split,
-        #         test_trues=test_trues,
-        #         test_softmax=test_softmax,
-        #         acc_test=acc_test,
-        #         conf_mat=conf_mat
-        #     )
-        #     pickle.dump(dump_content, pkl)
+        with open(results_filepath, 'w') as pkl:
+            dump_content = dict(
+                args=args,
+                annots_prob=annots[prob][mask_prob],
+                classes=classes,
+                split=split,
+                test_trues=test_trues,
+                test_softmax=test_softmax,
+                acc_test=acc_test,
+                conf_mat=conf_mat
+            )
+            pickle.dump(dump_content, pkl)
 
         print(classes)
         conf_mat = np.sum(conf_mat, axis=-1)
