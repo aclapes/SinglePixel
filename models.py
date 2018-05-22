@@ -40,9 +40,11 @@ def init_model(lstm_variation, input_shape, hidden_size, nr_classes, dropout=0.2
 
 
 def scheduler(iteration):
-    if iteration < 10:
+    if iteration < 1:
         return 1e-3
-    elif iteration < 20:
+    elif iteration < 10:
         return 5e-4
-    else:
+    elif iteration < 50:
         return 1e-4
+    else:
+        return 1e-5
