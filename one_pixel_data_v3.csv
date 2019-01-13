@@ -1,0 +1,568 @@
+folder,file_name,repetition,path,direction,walking,forward,reverse,sd_su,sd,su,handwave,setup,windows,exceptions,F_R_hw_sd_su,w_hw_sd_su
+10.02.2018,100218_A1_F_1 ,1,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_10 ,10,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_11 ,11,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_12 ,12,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_13 ,13,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_14 ,14,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_15 ,15,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_16 ,16,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_17 ,17,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_18 ,18,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_19 ,19,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_2 ,2,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_20 ,20,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_21 ,21,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_22 ,22,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_23 ,23,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_24 ,24,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_25 ,25,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_3 ,3,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_4 ,4,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_5 ,5,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_6 ,6,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_7 ,7,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_8 ,8,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_F_9 ,9,A1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A1_R_1 ,1,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_10 ,10,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_11 ,11,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_12 ,12,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_13 ,13,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_14 ,14,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_15 ,15,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_16 ,16,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_17 ,17,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_18 ,18,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_19 ,19,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_2 ,2,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_20 ,20,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_21 ,21,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_22 ,22,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_23 ,23,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_24 ,24,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_25 ,25,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_3 ,3,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_4 ,4,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_5 ,5,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_6 ,6,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_7 ,7,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_8 ,8,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A1_R_9 ,9,A1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_F_1 ,1,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_10 ,10,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_11 ,11,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_12 ,12,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_13 ,13,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_14 ,14,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_15 ,15,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_16 ,16,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_17 ,17,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_18 ,18,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_19 ,19,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_2 ,2,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_20 ,20,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_21 ,21,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_22 ,22,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_23 ,23,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_24 ,24,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_25 ,25,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_3 ,3,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_4 ,4,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_5 ,5,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_6 ,6,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_7 ,7,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_8 ,8,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_F_9 ,9,A2,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_A2_R_1 ,1,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_10 ,10,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_11 ,11,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_12 ,12,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_13 ,13,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_14 ,14,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_15 ,15,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_16 ,16,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_17 ,17,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_18 ,18,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_19 ,19,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_2 ,2,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_20 ,20,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_21 ,21,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_22 ,22,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_23 ,23,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_24 ,24,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_25 ,25,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_3 ,3,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_4 ,4,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_5 ,5,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_6 ,6,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_7 ,7,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_8 ,8,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_A2_R_9 ,9,A2,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_F_1 ,1,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_10 ,10,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_11 ,11,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_12 ,12,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_13 ,13,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_14 ,14,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_15 ,15,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_16 ,16,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_17 ,17,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_18 ,18,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_19 ,19,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_2 ,2,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_20 ,20,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_21 ,21,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_22 ,22,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_23 ,23,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_24 ,24,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_25 ,25,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_3 ,3,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_4 ,4,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_5 ,5,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_6 ,6,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_7 ,7,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_8 ,8,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_F_9 ,9,B1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_B1_R_1 ,1,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_10 ,10,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_11 ,11,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_12 ,12,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_13 ,13,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_14 ,14,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_15 ,15,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_16 ,16,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_17 ,17,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_18 ,18,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_19 ,19,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_2 ,2,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_20 ,20,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_21 ,21,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_22 ,22,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_23 ,23,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_24 ,24,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_25 ,25,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_3 ,3,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_4 ,4,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_5 ,5,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_6 ,6,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_7 ,7,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_8 ,8,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_B1_R_9 ,9,B1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_C1_F_1 ,1,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_C1_F_2 ,2,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_C1_F_3 ,3,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_C1_F_4 ,4,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_C1_F_5 ,5,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_C1_F_6 ,6,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_C1_F_7 ,7,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_C1_R_1 ,1,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_C1_R_2 ,2,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_C1_R_3 ,3,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_C1_R_4 ,4,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_C1_R_5 ,5,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_C1_R_6 ,6,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_C1_R_7 ,7,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_C2_F_1 ,1,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_C2_F_2 ,2,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_C2_F_3 ,3,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_C2_F_4 ,4,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_C2_F_5 ,5,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_C2_F_6 ,6,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_C2_F_7 ,7,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+10.02.2018,100218_C2_R_1 ,1,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_C2_R_2 ,2,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_C2_R_3 ,3,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_C2_R_4 ,4,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_C2_R_5 ,5,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_C2_R_6 ,6,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018,100218_C2_R_7 ,7,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+10.02.2018\Falling Down,100218_A1_F_16_f,16,A1,F,1,1,0,none,0,0,0,none,0,f,F,w
+10.02.2018\Falling Down,100218_A1_R_5_s,5,A1,R,1,0,1,none,0,0,0,none,0,s,R,w
+10.02.2018\Falling Down,100218_B1_F_3_f,3,B1,F,1,1,0,none,0,0,0,none,0,f,F,w
+10.02.2018\Falling Down,100218_C1_R_6_f,6,C1,R,1,0,1,none,0,0,0,none,0,f,R,w
+11.02.2018,110218_C1_F_10 ,10,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C1_F_11 ,11,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C1_F_12 ,12,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C1_F_13 ,13,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C1_F_14 ,14,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C1_F_15 ,15,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C1_F_16 ,16,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C1_F_17 ,17,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C1_F_18 ,18,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C1_F_19 ,19,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C1_F_20 ,20,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C1_F_21 ,21,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C1_F_22 ,22,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C1_F_23 ,23,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C1_F_24 ,24,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C1_F_25 ,25,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C1_F_8 ,8,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C1_F_9 ,9,C1,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C1_R_10 ,10,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C1_R_11 ,11,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C1_R_12 ,12,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C1_R_13 ,13,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C1_R_14 ,14,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C1_R_15 ,15,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C1_R_16 ,16,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C1_R_17 ,17,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C1_R_18 ,18,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C1_R_19 ,19,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C1_R_20 ,20,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C1_R_21 ,21,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C1_R_22 ,22,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C1_R_23 ,23,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C1_R_24 ,24,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C1_R_25 ,25,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C1_R_8 ,8,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C1_R_9 ,9,C1,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C2_F_10 ,10,C2,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C2_F_11 ,11,C2,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C2_F_12 ,12,C2,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C2_F_13 ,13,C2,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C2_F_15 ,14,C2,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C2_F_16 ,15,C2,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C2_F_17 ,16,C2,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C2_F_18 ,17,C2,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C2_F_19 ,18,C2,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C2_F_20 ,19,C2,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C2_F_21 ,20,C2,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C2_F_22 ,21,C2,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C2_F_23 ,22,C2,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C2_F_24 ,23,C2,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C2_F_25 ,24,C2,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C2_F_8 ,8,C2,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C2_F_9 ,9,C2,F,1,1,0,none,0,0,0,none,0,none,F,w
+11.02.2018,110218_C2_R_10 ,10,C2,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C2_R_11 ,11,C2,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C2_R_12 ,12,C2,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C2_R_13 ,13,C2,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C2_R_14 ,14,C2,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C2_R_15 ,15,C2,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C2_R_16 ,16,C2,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C2_R_17 ,17,C2,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C2_R_18 ,18,C2,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C2_R_19 ,19,C2,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C2_R_20 ,20,C2,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C2_R_21 ,21,C2,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C2_R_22 ,22,C2,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C2_R_23 ,23,C2,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C2_R_24 ,24,C2,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C2_R_25 ,25,C2,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C2_R_8 ,8,C2,R,1,0,1,none,0,0,0,none,0,none,R,w
+11.02.2018,110218_C2_R_9 ,9,C2,R,1,0,1,none,0,0,0,none,0,none,R,w
+Sitting down and standing up 11.02.2018,11022018_SD1_1 ,1,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD1_10 ,10,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD1_2 ,2,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD1_3 ,3,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD1_4 ,4,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD1_5 ,5,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD1_6 ,6,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD1_7 ,7,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD1_8 ,8,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD1_9 ,9,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD2_1 ,1,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD2_10 ,10,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD2_2 ,2,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD2_3 ,3,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD2_4 ,4,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD2_5 ,5,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD2_6 ,6,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD2_7 ,7,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD2_8 ,8,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD2_9 ,9,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD3_1 ,1,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD3_10 ,10,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD3_2 ,2,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD3_3 ,3,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD3_4 ,4,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD3_5 ,5,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD3_6 ,6,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD3_7 ,7,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD3_8 ,8,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD3_9 ,9,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD4_1 ,1,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD4_10 ,10,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD4_2 ,2,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD4_3 ,3,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD4_4 ,4,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD4_5 ,5,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD4_6 ,6,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD4_7 ,7,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD4_8 ,8,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD4_9 ,9,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD5_1 ,1,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD5_10 ,10,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD5_2 ,2,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD5_3 ,3,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD5_4 ,4,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD5_5 ,5,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD5_6 ,6,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD5_7 ,7,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD5_8 ,8,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SD5_9 ,9,none,none,0,0,0,sd,1,0,0,none,0,none,sd,sd
+Sitting down and standing up 11.02.2018,11022018_SU1_1 ,1,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU1_10 ,10,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU1_2 ,2,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU1_3 ,3,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU1_4 ,4,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU1_5 ,5,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU1_6 ,6,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU1_7 ,7,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU1_8 ,8,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU1_9 ,9,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU2_1 ,1,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU2_10 ,10,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU2_2 ,2,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU2_3 ,3,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU2_4 ,4,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU2_5 ,5,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU2_6 ,6,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU2_7 ,7,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU2_8 ,8,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU2_9 ,9,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU3_1 ,1,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU3_10 ,10,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU3_2 ,2,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU3_3 ,3,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU3_4 ,4,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU3_5 ,5,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU3_6 ,6,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU3_7 ,7,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU3_8 ,8,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU3_9 ,9,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU4_1 ,1,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU4_10 ,10,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU4_2 ,2,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU4_3 ,3,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU4_4 ,4,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU4_5 ,5,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU4_6 ,6,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU4_7 ,7,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU4_8 ,8,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU4_9 ,9,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU5_1 ,1,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU5_10 ,10,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU5_2 ,2,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU5_3 ,3,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU5_4 ,4,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU5_5 ,5,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU5_6 ,6,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU5_7 ,7,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU5_8 ,8,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+Sitting down and standing up 11.02.2018,11022018_SU5_9 ,9,none,none,0,0,0,su,0,1,0,none,0,none,su,su
+25.02.2018\Handwave,250218_HW2_1 ,1,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_10 ,10,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_11 ,11,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_12 ,12,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_13 ,13,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_14 ,14,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_15 ,15,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_16 ,16,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_17 ,17,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_18 ,18,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_19 ,19,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_2 ,2,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_20 ,20,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_21 ,21,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_22 ,22,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_23 ,23,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_24 ,24,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_25 ,25,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_3 ,3,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_4 ,4,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_5 ,5,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_6 ,6,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_7 ,7,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_8 ,8,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW2_9 ,9,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_1 ,1,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_10 ,10,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_11 ,11,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_12 ,12,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_13 ,13,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_14 ,14,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_15 ,15,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_16 ,16,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_17 ,17,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_18 ,18,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_19 ,19,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_2 ,2,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_20 ,20,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_21 ,21,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_22 ,22,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_23 ,23,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_24 ,24,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_25 ,25,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_3 ,3,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_4 ,4,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_5 ,5,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_6 ,6,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_7 ,7,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_8 ,8,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\Handwave,250218_HW5_9 ,9,none,none,0,0,0,none,0,0,1,none,0,none,hw,hw
+25.02.2018\SetUp1,250218_A1_F_1 ,1,A1,F,1,1,0,none,0,0,0,1,0,none,F,w
+25.02.2018\SetUp1,250218_A1_F_10 ,10,A1,F,1,1,0,none,0,0,0,1,0,none,F,w
+25.02.2018\SetUp1,250218_A1_F_1_windows ,1,A1,F,1,1,0,none,0,0,0,1,1,none,F,w
+25.02.2018\SetUp1,250218_A1_F_2 ,2,A1,F,1,1,0,none,0,0,0,1,0,none,F,w
+25.02.2018\SetUp1,250218_A1_F_2_windows ,2,A1,F,1,1,0,none,0,0,0,1,1,none,F,w
+25.02.2018\SetUp1,250218_A1_F_3 ,3,A1,F,1,1,0,none,0,0,0,1,0,none,F,w
+25.02.2018\SetUp1,250218_A1_F_4 ,4,A1,F,1,1,0,none,0,0,0,1,0,none,F,w
+25.02.2018\SetUp1,250218_A1_F_5 ,5,A1,F,1,1,0,none,0,0,0,1,0,none,F,w
+25.02.2018\SetUp1,250218_A1_F_6 ,6,A1,F,1,1,0,none,0,0,0,1,0,none,F,w
+25.02.2018\SetUp1,250218_A1_F_7 ,7,A1,F,1,1,0,none,0,0,0,1,0,none,F,w
+25.02.2018\SetUp1,250218_A1_F_8 ,8,A1,F,1,1,0,none,0,0,0,1,0,none,F,w
+25.02.2018\SetUp1,250218_A1_F_9 ,9,A1,F,1,1,0,none,0,0,0,1,0,none,F,w
+25.02.2018\SetUp1,250218_A1_R_1 ,1,A1,R,1,0,1,none,0,0,0,1,0,none,R,w
+25.02.2018\SetUp1,250218_A1_R_10 ,10,A1,R,1,0,1,none,0,0,0,1,0,none,R,w
+25.02.2018\SetUp1,250218_A1_R_1_windows ,1,A1,R,1,0,1,none,0,0,0,1,1,none,R,w
+25.02.2018\SetUp1,250218_A1_R_2 ,2,A1,R,1,0,1,none,0,0,0,1,0,none,R,w
+25.02.2018\SetUp1,250218_A1_R_2_windows ,2,A1,R,1,0,1,none,0,0,0,1,1,none,R,w
+25.02.2018\SetUp1,250218_A1_R_3 ,3,A1,R,1,0,1,none,0,0,0,1,0,none,R,w
+25.02.2018\SetUp1,250218_A1_R_4 ,4,A1,R,1,0,1,none,0,0,0,1,0,none,R,w
+25.02.2018\SetUp1,250218_A1_R_5 ,5,A1,R,1,0,1,none,0,0,0,1,0,none,R,w
+25.02.2018\SetUp1,250218_A1_R_6 ,6,A1,R,1,0,1,none,0,0,0,1,0,none,R,w
+25.02.2018\SetUp1,250218_A1_R_7 ,7,A1,R,1,0,1,none,0,0,0,1,0,none,R,w
+25.02.2018\SetUp1,250218_A1_R_9 ,8,A1,R,1,0,1,none,0,0,0,1,0,none,R,w
+25.02.2018\SetUp2,250218_C2_F_1 ,1,C2,F,1,1,0,none,0,0,0,2,0,none,F,w
+25.02.2018\SetUp2,250218_C2_F_10 ,10,C2,F,1,1,0,none,0,0,0,2,0,none,F,w
+25.02.2018\SetUp2,250218_C2_F_1_windows ,1,C2,F,1,1,0,none,0,0,0,2,1,none,F,w
+25.02.2018\SetUp2,250218_C2_F_2 ,2,C2,F,1,1,0,none,0,0,0,2,0,none,F,w
+25.02.2018\SetUp2,250218_C2_F_2_windows ,2,C2,F,1,1,0,none,0,0,0,2,1,none,F,w
+25.02.2018\SetUp2,250218_C2_F_3 ,3,C2,F,1,1,0,none,0,0,0,2,0,none,F,w
+25.02.2018\SetUp2,250218_C2_F_4 ,4,C2,F,1,1,0,none,0,0,0,2,0,none,F,w
+25.02.2018\SetUp2,250218_C2_F_5 ,5,C2,F,1,1,0,none,0,0,0,2,0,none,F,w
+25.02.2018\SetUp2,250218_C2_F_6 ,6,C2,F,1,1,0,none,0,0,0,2,0,none,F,w
+25.02.2018\SetUp2,250218_C2_F_7 ,7,C2,F,1,1,0,none,0,0,0,2,0,none,F,w
+25.02.2018\SetUp2,250218_C2_F_8 ,8,C2,F,1,1,0,none,0,0,0,2,0,none,F,w
+25.02.2018\SetUp2,250218_C2_F_9 ,9,C2,F,1,1,0,none,0,0,0,2,0,none,F,w
+25.02.2018\SetUp2,250218_C2_R_1 ,1,C2,R,1,0,1,none,0,0,0,2,0,none,R,w
+25.02.2018\SetUp2,250218_C2_R_10 ,10,C2,R,1,0,1,none,0,0,0,2,0,none,R,w
+25.02.2018\SetUp2,250218_C2_R_1_windows ,1,C2,R,1,0,1,none,0,0,0,2,1,none,R,w
+25.02.2018\SetUp2,250218_C2_R_2 ,2,C2,R,1,0,1,none,0,0,0,2,0,none,R,w
+25.02.2018\SetUp2,250218_C2_R_2_windows ,2,C2,R,1,0,1,none,0,0,0,2,1,none,R,w
+25.02.2018\SetUp2,250218_C2_R_3 ,3,C2,R,1,0,1,none,0,0,0,2,0,none,R,w
+25.02.2018\SetUp2,250218_C2_R_4 ,4,C2,R,1,0,1,none,0,0,0,2,0,none,R,w
+25.02.2018\SetUp2,250218_C2_R_5 ,5,C2,R,1,0,1,none,0,0,0,2,0,none,R,w
+25.02.2018\SetUp2,250218_C2_R_6 ,6,C2,R,1,0,1,none,0,0,0,2,0,none,R,w
+25.02.2018\SetUp2,250218_C2_R_7 ,7,C2,R,1,0,1,none,0,0,0,2,0,none,R,w
+25.02.2018\SetUp2,250218_C2_R_8 ,8,C2,R,1,0,1,none,0,0,0,2,0,none,R,w
+25.02.2018\SetUp2,250218_C2_R_9 ,9,C2,R,1,0,1,none,0,0,0,2,0,none,R,w
+25.02.2018\SetUp2\falling down,250218_C2_R_7_f,7,C2,R,1,0,1,none,0,0,0,2,0,f,R,w
+25.02.2018\SetUp3,250218_A2_F_1 ,1,A2,F,1,1,0,none,0,0,0,3,0,none,F,w
+25.02.2018\SetUp3,250218_A2_F_10 ,10,A2,F,1,1,0,none,0,0,0,3,0,none,F,w
+25.02.2018\SetUp3,250218_A2_F_1_windows ,1,A2,F,1,1,0,none,0,0,0,3,1,none,F,w
+25.02.2018\SetUp3,250218_A2_F_2 ,2,A2,F,1,1,0,none,0,0,0,3,0,none,F,w
+25.02.2018\SetUp3,250218_A2_F_2_windows ,2,A2,F,1,1,0,none,0,0,0,3,1,none,F,w
+25.02.2018\SetUp3,250218_A2_F_3 ,3,A2,F,1,1,0,none,0,0,0,3,0,none,F,w
+25.02.2018\SetUp3,250218_A2_F_4 ,4,A2,F,1,1,0,none,0,0,0,3,0,none,F,w
+25.02.2018\SetUp3,250218_A2_F_5 ,5,A2,F,1,1,0,none,0,0,0,3,0,none,F,w
+25.02.2018\SetUp3,250218_A2_F_6 ,6,A2,F,1,1,0,none,0,0,0,3,0,none,F,w
+25.02.2018\SetUp3,250218_A2_F_7 ,7,A2,F,1,1,0,none,0,0,0,3,0,none,F,w
+25.02.2018\SetUp3,250218_A2_F_8 ,8,A2,F,1,1,0,none,0,0,0,3,0,none,F,w
+25.02.2018\SetUp3,250218_A2_F_9 ,9,A2,F,1,1,0,none,0,0,0,3,0,none,F,w
+25.02.2018\SetUp3,250218_A2_R_1 ,1,A2,R,1,0,1,none,0,0,0,3,0,none,R,w
+25.02.2018\SetUp3,250218_A2_R_10 ,10,A2,R,1,0,1,none,0,0,0,3,0,none,R,w
+25.02.2018\SetUp3,250218_A2_R_1_windows ,1,A2,R,1,0,1,none,0,0,0,3,1,none,R,w
+25.02.2018\SetUp3,250218_A2_R_2 ,2,A2,R,1,0,1,none,0,0,0,3,0,none,R,w
+25.02.2018\SetUp3,250218_A2_R_2_windows ,2,A2,R,1,0,1,none,0,0,0,3,1,none,R,w
+25.02.2018\SetUp3,250218_A2_R_3 ,3,A2,R,1,0,1,none,0,0,0,3,0,none,R,w
+25.02.2018\SetUp3,250218_A2_R_4 ,4,A2,R,1,0,1,none,0,0,0,3,0,none,R,w
+25.02.2018\SetUp3,250218_A2_R_5 ,5,A2,R,1,0,1,none,0,0,0,3,0,none,R,w
+25.02.2018\SetUp3,250218_A2_R_6 ,6,A2,R,1,0,1,none,0,0,0,3,0,none,R,w
+25.02.2018\SetUp3,250218_A2_R_7 ,7,A2,R,1,0,1,none,0,0,0,3,0,none,R,w
+25.02.2018\SetUp3,250218_A2_R_8 ,8,A2,R,1,0,1,none,0,0,0,3,0,none,R,w
+25.02.2018\SetUp3,250218_A2_R_9 ,9,A2,R,1,0,1,none,0,0,0,3,0,none,R,w
+25.02.2018\SetUp4,250218_C1_F_1 ,1,C1,F,1,1,0,none,0,0,0,4,0,none,F,w
+25.02.2018\SetUp4,250218_C1_F_10 ,10,C1,F,1,1,0,none,0,0,0,4,0,none,F,w
+25.02.2018\SetUp4,250218_C1_F_1_windows ,1,C1,F,1,1,0,none,0,0,0,4,1,none,F,w
+25.02.2018\SetUp4,250218_C1_F_2 ,2,C1,F,1,1,0,none,0,0,0,4,0,none,F,w
+25.02.2018\SetUp4,250218_C1_F_2_windows ,2,C1,F,1,1,0,none,0,0,0,4,1,none,F,w
+25.02.2018\SetUp4,250218_C1_F_3 ,3,C1,F,1,1,0,none,0,0,0,4,0,none,F,w
+25.02.2018\SetUp4,250218_C1_F_4 ,4,C1,F,1,1,0,none,0,0,0,4,0,none,F,w
+25.02.2018\SetUp4,250218_C1_F_5 ,5,C1,F,1,1,0,none,0,0,0,4,0,none,F,w
+25.02.2018\SetUp4,250218_C1_F_6 ,6,C1,F,1,1,0,none,0,0,0,4,0,none,F,w
+25.02.2018\SetUp4,250218_C1_F_7 ,7,C1,F,1,1,0,none,0,0,0,4,0,none,F,w
+25.02.2018\SetUp4,250218_C1_F_8 ,8,C1,F,1,1,0,none,0,0,0,4,0,none,F,w
+25.02.2018\SetUp4,250218_C1_F_9 ,9,C1,F,1,1,0,none,0,0,0,4,0,none,F,w
+25.02.2018\SetUp4,250218_C1_R_1 ,1,C1,R,1,0,1,none,0,0,0,4,0,none,R,w
+25.02.2018\SetUp4,250218_C1_R_10 ,10,C1,R,1,0,1,none,0,0,0,4,0,none,R,w
+25.02.2018\SetUp4,250218_C1_R_1_windows ,1,C1,R,1,0,1,none,0,0,0,4,1,none,R,w
+25.02.2018\SetUp4,250218_C1_R_2 ,2,C1,R,1,0,1,none,0,0,0,4,0,none,R,w
+25.02.2018\SetUp4,250218_C1_R_2_windows ,2,C1,R,1,0,1,none,0,0,0,4,1,none,R,w
+25.02.2018\SetUp4,250218_C1_R_3 ,3,C1,R,1,0,1,none,0,0,0,4,0,none,R,w
+25.02.2018\SetUp4,250218_C1_R_4 ,4,C1,R,1,0,1,none,0,0,0,4,0,none,R,w
+25.02.2018\SetUp4,250218_C1_R_5 ,5,C1,R,1,0,1,none,0,0,0,4,0,none,R,w
+25.02.2018\SetUp4,250218_C1_R_6 ,6,C1,R,1,0,1,none,0,0,0,4,0,none,R,w
+25.02.2018\SetUp4,250218_C1_R_7 ,7,C1,R,1,0,1,none,0,0,0,4,0,none,R,w
+25.02.2018\SetUp4,250218_C1_R_8 ,8,C1,R,1,0,1,none,0,0,0,4,0,none,R,w
+25.02.2018\SetUp4,250218_C1_R_9 ,9,C1,R,1,0,1,none,0,0,0,4,0,none,R,w
+25.02.2018\SetUp5,250218_B1_F_1 ,1,B1,F,1,1,0,none,0,0,0,5,0,none,F,w
+25.02.2018\SetUp5,250218_B1_F_10 ,10,B1,F,1,1,0,none,0,0,0,5,0,none,F,w
+25.02.2018\SetUp5,250218_B1_F_1_windows ,1,B1,F,1,1,0,none,0,0,0,5,1,none,F,w
+25.02.2018\SetUp5,250218_B1_F_2 ,2,B1,F,1,1,0,none,0,0,0,5,0,none,F,w
+25.02.2018\SetUp5,250218_B1_F_2_windows ,2,B1,F,1,1,0,none,0,0,0,5,1,none,F,w
+25.02.2018\SetUp5,250218_B1_F_3 ,3,B1,F,1,1,0,none,0,0,0,5,0,none,F,w
+25.02.2018\SetUp5,250218_B1_F_4 ,4,B1,F,1,1,0,none,0,0,0,5,0,none,F,w
+25.02.2018\SetUp5,250218_B1_F_5 ,5,B1,F,1,1,0,none,0,0,0,5,0,none,F,w
+25.02.2018\SetUp5,250218_B1_F_6 ,6,B1,F,1,1,0,none,0,0,0,5,0,none,F,w
+25.02.2018\SetUp5,250218_B1_F_7 ,7,B1,F,1,1,0,none,0,0,0,5,0,none,F,w
+25.02.2018\SetUp5,250218_B1_F_8 ,8,B1,F,1,1,0,none,0,0,0,5,0,none,F,w
+25.02.2018\SetUp5,250218_B1_F_9 ,9,B1,F,1,1,0,none,0,0,0,5,0,none,F,w
+25.02.2018\SetUp5,250218_B1_R_1 ,1,B1,R,1,0,1,none,0,0,0,5,0,none,R,w
+25.02.2018\SetUp5,250218_B1_R_10 ,10,B1,R,1,0,1,none,0,0,0,5,0,none,R,w
+25.02.2018\SetUp5,250218_B1_R_1_windows ,1,B1,R,1,0,1,none,0,0,0,5,1,none,R,w
+25.02.2018\SetUp5,250218_B1_R_2 ,2,B1,R,1,0,1,none,0,0,0,5,0,none,R,w
+25.02.2018\SetUp5,250218_B1_R_2_windows ,2,B1,R,1,0,1,none,0,0,0,5,1,none,R,w
+25.02.2018\SetUp5,250218_B1_R_3 ,3,B1,R,1,0,1,none,0,0,0,5,0,none,R,w
+25.02.2018\SetUp5,250218_B1_R_4 ,4,B1,R,1,0,1,none,0,0,0,5,0,none,R,w
+25.02.2018\SetUp5,250218_B1_R_5 ,5,B1,R,1,0,1,none,0,0,0,5,0,none,R,w
+25.02.2018\SetUp5,250218_B1_R_6 ,6,B1,R,1,0,1,none,0,0,0,5,0,none,R,w
+25.02.2018\SetUp5,250218_B1_R_7 ,7,B1,R,1,0,1,none,0,0,0,5,0,none,R,w
+25.02.2018\SetUp5,250218_B1_R_8 ,8,B1,R,1,0,1,none,0,0,0,5,0,none,R,w
+25.02.2018\SetUp5,250218_B1_R_9 ,9,B1,R,1,0,1,none,0,0,0,5,0,none,R,w
+25.02.2018\SetUp5\falling down,250218_B1_F_6_f,6,B1,F,1,1,0,none,0,0,0,5,0,f,F,w
+25.02.2018\SetUp6,250218_HW6_1 ,1,none,none,0,0,0,none,0,0,1,6,0,none,hw,hw
+25.02.2018\SetUp6,250218_HW6_10 ,10,none,none,0,0,0,none,0,0,1,6,0,none,hw,hw
+25.02.2018\SetUp6,250218_HW6_1_windows ,1,none,none,0,0,0,none,0,0,1,6,1,none,hw,hw
+25.02.2018\SetUp6,250218_HW6_2 ,2,none,none,0,0,0,none,0,0,1,6,0,none,hw,hw
+25.02.2018\SetUp6,250218_HW6_2_windows ,2,none,none,0,0,0,none,0,0,1,6,1,none,hw,hw
+25.02.2018\SetUp6,250218_HW6_3 ,3,none,none,0,0,0,none,0,0,1,6,0,none,hw,hw
+25.02.2018\SetUp6,250218_HW6_4 ,4,none,none,0,0,0,none,0,0,1,6,0,none,hw,hw
+25.02.2018\SetUp6,250218_HW6_5 ,5,none,none,0,0,0,none,0,0,1,6,0,none,hw,hw
+25.02.2018\SetUp6,250218_HW6_6 ,6,none,none,0,0,0,none,0,0,1,6,0,none,hw,hw
+25.02.2018\SetUp6,250218_HW6_7 ,7,none,none,0,0,0,none,0,0,1,6,0,none,hw,hw
+25.02.2018\SetUp6,250218_HW6_8 ,8,none,none,0,0,0,none,0,0,1,6,0,none,hw,hw
+25.02.2018\SetUp6,250218_HW6_9 ,9,none,none,0,0,0,none,0,0,1,6,0,none,hw,hw
+25.02.2018\SetUp6,250218_SD6_1 ,1,none,none,0,0,0,sd,1,0,0,6,0,none,sd,sd
+25.02.2018\SetUp6,250218_SD6_10 ,10,none,none,0,0,0,sd,1,0,0,6,0,none,sd,sd
+25.02.2018\SetUp6,250218_SD6_1_windows ,1,none,none,0,0,0,sd,1,0,0,6,1,none,sd,sd
+25.02.2018\SetUp6,250218_SD6_2 ,2,none,none,0,0,0,sd,1,0,0,6,0,none,sd,sd
+25.02.2018\SetUp6,250218_SD6_2_windows ,2,none,none,0,0,0,sd,1,0,0,6,1,none,sd,sd
+25.02.2018\SetUp6,250218_SD6_3 ,3,none,none,0,0,0,sd,1,0,0,6,0,none,sd,sd
+25.02.2018\SetUp6,250218_SD6_4 ,4,none,none,0,0,0,sd,1,0,0,6,0,none,sd,sd
+25.02.2018\SetUp6,250218_SD6_5 ,5,none,none,0,0,0,sd,1,0,0,6,0,none,sd,sd
+25.02.2018\SetUp6,250218_SD6_6 ,6,none,none,0,0,0,sd,1,0,0,6,0,none,sd,sd
+25.02.2018\SetUp6,250218_SD6_7 ,7,none,none,0,0,0,sd,1,0,0,6,0,none,sd,sd
+25.02.2018\SetUp6,250218_SD6_8 ,8,none,none,0,0,0,sd,1,0,0,6,0,none,sd,sd
+25.02.2018\SetUp6,250218_SD6_9 ,9,none,none,0,0,0,sd,1,0,0,6,0,none,sd,sd
+25.02.2018\SetUp6,250218_SU6_1 ,1,none,none,0,0,0,su,0,1,0,6,0,none,su,su
+25.02.2018\SetUp6,250218_SU6_10 ,10,none,none,0,0,0,su,0,1,0,6,0,none,su,su
+25.02.2018\SetUp6,250218_SU6_1_windows ,1,none,none,0,0,0,su,0,1,0,6,1,none,su,su
+25.02.2018\SetUp6,250218_SU6_2 ,2,none,none,0,0,0,su,0,1,0,6,0,none,su,su
+25.02.2018\SetUp6,250218_SU6_2_windows ,2,none,none,0,0,0,su,0,1,0,6,1,none,su,su
+25.02.2018\SetUp6,250218_SU6_3 ,3,none,none,0,0,0,su,0,1,0,6,0,none,su,su
+25.02.2018\SetUp6,250218_SU6_4 ,4,none,none,0,0,0,su,0,1,0,6,0,none,su,su
+25.02.2018\SetUp6,250218_SU6_5 ,5,none,none,0,0,0,su,0,1,0,6,0,none,su,su
+25.02.2018\SetUp6,250218_SU6_6 ,6,none,none,0,0,0,su,0,1,0,6,0,none,su,su
+25.02.2018\SetUp6,250218_SU6_7 ,7,none,none,0,0,0,su,0,1,0,6,0,none,su,su
+25.02.2018\SetUp6,250218_SU6_8 ,8,none,none,0,0,0,su,0,1,0,6,0,none,su,su
+25.02.2018\SetUp6,250218_SU6_9 ,9,none,none,0,0,0,su,0,1,0,6,0,none,su,su
+25.02.2018\Empty room with objects,250218_empty,none,none,none,0,0,0,none,0,0,0,none,none,none,none,none
+25.02.2018\Empty room with objects,250218_setup1,none,none,none,0,0,0,none,0,0,0,1,none,none,none,none
+25.02.2018\Empty room with objects,250218_setup2and6,none,none,none,0,0,0,none,0,0,0,2,none,none,none,none
+25.02.2018\Empty room with objects,250218_setup3,none,none,none,0,0,0,none,0,0,0,3,none,none,none,none
+25.02.2018\Empty room with objects,250218_setup4,none,none,none,0,0,0,none,0,0,0,4,none,none,none,none
+25.02.2018\Empty room with objects,250218_setup5,none,none,none,0,0,0,none,0,0,0,5,none,none,none,none
+25.02.2018\Empty room with objects,250218_setup2and6,none,none,none,0,0,0,none,0,0,0,6,none,none,none,none
